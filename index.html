@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>demo</title>
+    <title>#1</title>
 
     <script src="xeogl.js"></script>
     <script src="OBJModel.js"></script>
@@ -18,29 +18,6 @@
 
         confRoom.on("loaded", function () {
 
-                // Fit table top to view
-
-                var cameraFlight = new xeogl.CameraFlightAnimation();
-                cameraFlight.flyTo("confRoom#mesh29");
-
-
-                // Make everything transparent except for the conference table and chairs
-
-                var id;
-                var meshes = confRoom.meshes;
-
-                for (id in meshes) {
-                    var mesh = meshes[id];
-                    switch (id) {
-                        case "confRoom#mesh31":
-                        case "confRoom#mesh29":
-                            break;
-                        default:
-                            mesh.material.alpha = 0.5;
-                            mesh.material.alphaMode = "blend";
-
-                    }
-                }
             });
 
             // Enable camera interaction
