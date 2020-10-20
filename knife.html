@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head><title>Aspose.3D</title></head>
+    <style>
+        #canvas {border:1px solid black;width: 900px;height:700px;}
+    </style>
+    <body>
+        <canvas id='canvas'></canvas>
+    </body>
+        <script src='aspose3d.js'></script>
+        <script>
+                aspose3d({
+                    canvas : 'canvas',
+                    grid : true,
+                    ui : true,
+                    orientationBox : true,
+                    camera:
+                    {
+                        far: 1000,
+                        near: 1,
+                        up: 'y',
+                        lookAt : [0, 0, 0],
+                        position : [10, 10, 10],
+                        fov : 45,
+                        ruler : false
+                    },
+                    url: 'scene.a3dw'
+                });
+        </script>
+</html>
