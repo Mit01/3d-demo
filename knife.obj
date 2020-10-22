@@ -1,6 +1,6 @@
-# Blender v2.82 (sub 7) OBJ File: 'knif.blend'
+# Blender v2.82 (sub 7) OBJ File: 'knife.blend'
 # www.blender.org
-mtllib knif.mtl
+mtllib knife.mtl
 o Cube
 v -0.237749 2.634222 1.033589
 v -0.237749 2.579936 -0.756775
