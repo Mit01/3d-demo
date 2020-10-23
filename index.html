@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Google model viewer</title>
+    <title>Models demo</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
@@ -15,20 +15,29 @@
 </head>
 
 <body>
-    <model-viewer src="knife_short.glb.glb"  auto-rotate camera-controls
-        class="model-viewer">
-    </model-viewer>
-    <model-viewer src="parfum.glb"  auto-rotate camera-controls
-        class="model-viewer">
-    </model-viewer>
-    <model-viewer src="cbd.glb"  auto-rotate camera-controls
-        class="model-viewer">
-    </model-viewer>
+    <div class="wrap">
+        <model-viewer src="knife_short.glb"  auto-rotate camera-controls
+            class="model-viewer">
+        </model-viewer>
+        <model-viewer src="parfum.glb"  auto-rotate camera-controls
+            class="model-viewer">
+        </model-viewer>
+        <model-viewer src="cbd.glb"  auto-rotate camera-controls
+            class="model-viewer">
+        </model-viewer>
+    </div>
     <style>
+        .wrap{
+            display: flex;
+            height: 100vh;
+        }
         .model-viewer {
-            width: 500px;
+            width: 33.3%;
             height: 500px;
-            border: 2px solid #333;
+            
+        }
+        .model-viewer + .model-viewer{
+            border-left: 2px solid #333;
         }
     </style>
 </body>
