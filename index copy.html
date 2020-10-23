@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#6</title>
+
+    <script src="xeogl.js"></script>
+    <!-- <script src="xeogl.module.js"></script> -->
+    <script src="OBJModel.js"></script>
+</head>
+<body>
+    
+    <script>
+     var confRoom = new xeogl.OBJModel({
+            id: "knife",
+            src: "./knife.obj"
+        });
+
+        confRoom.on("loaded", function () {
+
+            });
+
+            // Enable camera interaction
+
+            new xeogl.CameraControl();
+
+            // Orbit camera
+
+            var camera = confRoom.scene.camera;
+            camera.orbitPitch(10);
+            confRoom.scene.on("tick", function () {
+                camera.orbitYaw(0.1);
+            });
+
+
+    </script>
+</body>
+</html>

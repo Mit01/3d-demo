@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#6</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google model viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
-    <script src="xeogl.js"></script>
-    <!-- <script src="xeogl.module.js"></script> -->
-    <script src="OBJModel.js"></script>
-</head>
-<body>
-    
-    <script>
-     var confRoom = new xeogl.OBJModel({
-            id: "knife",
-            src: "knife.obj"
-        });
-
-        confRoom.on("loaded", function () {
-
-            });
-
-            // Enable camera interaction
-
-            new xeogl.CameraControl();
-
-            // Orbit camera
-
-            var camera = confRoom.scene.camera;
-            camera.orbitPitch(10);
-            confRoom.scene.on("tick", function () {
-                camera.orbitYaw(0.1);
-            });
-
-
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer@<version>/dist/model-viewer.min.js">
     </script>
+</head>
+
+<body>
+    <model-viewer src="knife_short.glb.glb"  auto-rotate camera-controls
+        class="model-viewer">
+    </model-viewer>
+    <model-viewer src="parfum.glb"  auto-rotate camera-controls
+        class="model-viewer">
+    </model-viewer>
+    <model-viewer src="cbd.glb"  auto-rotate camera-controls
+        class="model-viewer">
+    </model-viewer>
+    <style>
+        .model-viewer {
+            width: 500px;
+            height: 500px;
+            border: 2px solid #333;
+        }
+    </style>
 </body>
+
 </html>
